@@ -1,0 +1,21 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+sih/
+venv/
+.venv/
+
+# Model artifacts
+*.pkl
+
+# Local data and archives
+*.csv
+*.zip
