@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+streamlit
+requests
+joblib
+langchain
+langchain-groq
+python-dotenv
+xgboost
+lightgbm
+catboost

@@ -19,3 +19,10 @@ venv/
 # Local data and archives
 *.csv
 *.zip
+
+# Large model artifacts
+*.joblib
+
+# Local audit archives and temporary copies
+/kishan_mitra_audit.zip
+/kishan_mitra_audit_temp/

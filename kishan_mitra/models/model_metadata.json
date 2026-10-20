@@ -1,0 +1,51 @@
+{
+  "target_column": "Yield_kg_per_ha",
+  "feature_columns": [
+    "State Name",
+    "Dist Name",
+    "Crop",
+    "Year",
+    "Temperature_C",
+    "Humidity_%",
+    "pH",
+    "Rainfall_mm",
+    "Wind_Speed_m_s",
+    "Solar_Radiation_MJ_m2_day"
+  ],
+  "categorical_features": [
+    "State Name",
+    "Dist Name",
+    "Crop"
+  ],
+  "numeric_features": [
+    "Year",
+    "Temperature_C",
+    "Humidity_%",
+    "pH",
+    "Rainfall_mm",
+    "Wind_Speed_m_s",
+    "Solar_Radiation_MJ_m2_day"
+  ],
+  "training_year_end": 2012,
+  "validation_years": [
+    2013,
+    2014
+  ],
+  "test_years": [
+    2015,
+    2017
+  ],
+  "model_type": "RandomForestRegressor",
+  "validation_metrics": {
+    "rows": 1922,
+    "MAE": 403.8452305811954,
+    "RMSE": 683.8883981346115,
+    "R2": 0.749890204897234
+  },
+  "test_metrics": {
+    "rows": 2918,
+    "MAE": 454.0937879058702,
+    "RMSE": 821.5555142680672,
+    "R2": 0.6737296942662236
+  }
+}
