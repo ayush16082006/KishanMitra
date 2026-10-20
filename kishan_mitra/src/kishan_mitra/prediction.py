@@ -18,7 +18,7 @@ from training.model_config import (
 )
 
 FEATURE_COLUMNS = CATEGORICAL_FEATURES + NUMERIC_FEATURES
-DEFAULT_MODEL_NAME = "extra_trees_candidate"
+DEFAULT_MODEL_NAME = "random_forest"
 
 CANDIDATE_MODEL_PATH = (
     MODELS_DIR / "crop_yield_extratrees_candidate.joblib"
