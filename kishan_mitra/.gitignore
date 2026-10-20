@@ -14,7 +14,8 @@ venv/
 sih/
 
 # Local datasets and archives
-*.csv
+# Keep CSV files ignored by default, but allow the application dataset
+!Datasets/Custom_Crops_yield_Historical_Dataset.csv
 *.zip
 
 # Model artifacts

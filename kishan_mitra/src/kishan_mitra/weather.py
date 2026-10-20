@@ -3,6 +3,7 @@ import logging
 import os
 
 import requests
+import streamlit as st
 from dotenv import load_dotenv
 
 
@@ -49,6 +50,12 @@ def get_weather(latitude, longitude):
         raise ValueError("Longitude must be between -180 and 180.")
 
     api_key = os.getenv("WEATHER_API_KEY")
+
+    if not api_key:
+        try:
+            api_key = st.secrets.get("WEATHER_API_KEY")
+        except (FileNotFoundError, RuntimeError):
+            api_key = None
 
     if not api_key:
         logger.error("WEATHER_API_KEY is not configured.")

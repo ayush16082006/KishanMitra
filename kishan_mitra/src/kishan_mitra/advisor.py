@@ -1,7 +1,7 @@
-
 import logging
 import os
 
+import streamlit as st
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -34,6 +34,12 @@ def get_advisor_response(
     """Generate cautious, farmer-friendly agricultural guidance using Groq."""
 
     api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key:
+        try:
+            api_key = st.secrets.get("GROQ_API_KEY")
+        except (FileNotFoundError, RuntimeError):
+            api_key = None
 
     if not api_key:
         raise RuntimeError(
