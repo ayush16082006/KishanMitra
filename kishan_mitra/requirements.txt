@@ -10,3 +10,4 @@ python-dotenv
 xgboost
 lightgbm
 catboost
+-e ./kishan_mitra
