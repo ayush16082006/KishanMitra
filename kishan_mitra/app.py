@@ -159,38 +159,25 @@ except Exception:
     st.stop()
 
 
+
 # ============================================================
 # 7. SIDEBAR MODEL SELECTION
 # ============================================================
 
 st.sidebar.header("⚙️ Model Settings")
 
-model_options = {
-    "Extra Trees (Default)": "extra_trees_candidate",
-    "Random Forest (Comparison)": "random_forest",
-}
+# Use the established Random Forest pipeline exclusively.
+# The experimental Extra Trees candidate is not offered.
+selected_model = "random_forest"
 
-selected_model_label = st.sidebar.selectbox(
-    "Prediction model",
-    options=list(model_options.keys()),
-    index=0,
+st.sidebar.info(
+    "Using Random Forest for crop-yield prediction."
 )
-
-selected_model = model_options[selected_model_label]
-
-if selected_model == "extra_trees_candidate":
-    st.sidebar.info(
-        "Using Extra Trees, the preferred model based on the "
-        "recorded evaluation results."
-    )
-else:
-    st.sidebar.info(
-        "Using Random Forest for comparison."
-    )
 
 st.sidebar.caption(
     "Predictions are estimates and are not guarantees of actual harvest."
 )
+
 
 
 # ============================================================
